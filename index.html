@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test ember.js modal</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+  <script type="text/x-handlebars" data-template-name="application">
+    <div class="row">
+      <div class="large-12 columns">{{outlet}}</div>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="test">
+    {{#link-to 'test.showModal'}}Show Modal{{/link-to}}
+    {{outlet}}
+  </script>
+
+
+  <script type="text/x-handlebars" data-template-name="test/showModal">
+    <h1>It's working!</h1>
+    <p>Modal window in Ember.js + Foundation 4</p>
+    
+    <a class="close-reveal-modal">&#215;</a>
+  </script>
+
+
+  <script src="static/js/libs/jquery/jquery.min.js"  type="text/javascript"></script>
+  <script src="static/js/libs/handlebars/handlebars.js"  type="text/javascript"></script>
+  <script src="static/js/libs/ember/ember.js"  type="text/javascript"></script>
+  <script src="static/js/libs/ember/ember-data.js"  type="text/javascript"></script>
+  <script src="static/js/libs/foundation/foundation.js"  type="text/javascript"></script>
+  <script src="static/js/libs/foundation/foundation.topbar.js"  type="text/javascript"></script>
+  <script src="static/js/libs/foundation/foundation.reveal.js"  type="text/javascript"></script>
+  <script src="static/js/libs/foundation/foundation.forms.js"  type="text/javascript"></script>
+  <script src="static/js/libs/custom.modernizr.js"  type="text/javascript"></script>
+  <script src="static/js/application.js"  type="text/javascript"></script>
+
+
+  <script type="text/javascript">
+  $(function(){
+    $(document).foundation();
+  });
+  </script>
+</body>
+</html>
